@@ -2,6 +2,7 @@
   "name": "menuhuts",  
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bratati-das.github.io/menuhuts",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -19,8 +20,7 @@
     "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4",
-    "homepage": "https://bratati-das.github.io/menuhuts"
+    "web-vitals": "^0.2.4"    
   },
   "scripts": {
     "predeploy": "npm run build",
