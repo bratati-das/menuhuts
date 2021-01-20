@@ -1,6 +1,5 @@
 {
-  "name": "menuhuts",
-  "homepage": "https://bratati-das.github.io/menuhuts",
+  "name": "menuhuts",  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +19,8 @@
     "react-owl-carousel": "^2.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "homepage": "https://bratati-das.github.io/menuhuts"
   },
   "scripts": {
     "predeploy": "npm run build",
