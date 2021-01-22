@@ -1,39 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { Modal, Form, Button, } from 'react-bootstrap';
 
 
 function ForgotPassword() {
+
+    const [show, setShow] = useState(false);
+
+    const forgotPasswordClose = () => setShow(false);
+    const forgotPasswordShow = () => setShow(true);
+
     return (
-        <div className="modal fade" id="forgotPassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h1 className="modal-title"><span>Forgot</span> Password</h1>
-                        <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                        <p>Enter your account’s email below. We will send you a verification code to reset your password.</p>
-                        <form>
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your email</label>
-                                <input type="text" className="form-control box" id="" placeholder="Email" />
-                            </div>
+        <>
+            <Link to={``} onClick={forgotPasswordShow}>Forgot?</Link>
+            <Modal show={show} onHide={forgotPasswordClose}>
+                <Modal.Header closeButton>
+                    <h1 className="modal-title"><span>Forgot</span> Password</h1></Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>Enter your email</Form.Label>
+                            <Form.Control type="text" className="box" id="" placeholder="Email" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <button type="submit" className="btn btn-secondary box">Forgot password</button>
-                            </div>
+                        <Form.Group>
+                            <Button variant="secondary" type="submit" className="box">Forgot password</Button>
+                        </Form.Group>
 
-                            <div className="form-group d-flex justify-content-center">
-                                <span>Already use MenuHuts? <Link className="secondary" to={``} data-toggle="modal" data-target="#signIn" data-dismiss="modal">Sign in</Link></span>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div className="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <Form.Group className="d-flex justify-content-center">
+                            <span>Already use MenuHuts? <Link className="secondary" to={``}>Sign in</Link></span>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                </Modal.Footer>
+            </Modal>
+        </>
     );
 }
 

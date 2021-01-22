@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import { Container, Row, Col, Form, Button, InputGroup, } from "react-bootstrap";
 
 
 function Banner() {
     return (
         <section className="banner inner">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <h2>Your favorite food, delivered with MenuHuts</h2>
 
-                    <form>
-                        <div className="form-group">
-                            <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text"><i className="fas fa-store"></i></span>
-                                </div>
-                                <input type="text" className="form-control" name="" id="" placeholder="Enter business near me by zipcode" />
-                            </div>
+                    <Form>
+                        <Form.Group>
+                            <InputGroup>
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text><i className="fas fa-store"></i></InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control id="" placeholder="Enter business near me by zipcode" />
+                            </InputGroup>
 
-                            <button type="submit" className="btn btn-primary">Search</button>
+                            <Button variant="primary" type="submit">Search</Button>
 
-                        </div>
-                    </form>
-                </div>
-            </div>
+                        </Form.Group>
+                    </Form>
+                </Col>
+            </Container>
         </section>
     );
 }

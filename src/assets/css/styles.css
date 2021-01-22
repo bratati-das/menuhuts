@@ -165,8 +165,14 @@ button.btn.box {
 button.btn.btn-primary {
   background-color: #000000;
 }
+button.btn.btn-primary:focus, button.btn.btn-primary:active {
+  background-color: #000000 !important;
+}
 button.btn.btn-secondary {
   background-color: #ff6937;
+}
+button.btn.btn-secondary:focus, button.btn.btn-secondary:active {
+  background-color: #ff6937 !important;
 }
 button.btn.btn-facebook, button.btn.btn-google {
   width: 100%;
@@ -189,6 +195,10 @@ button.btn.btn-google {
 }
 button:hover {
   opacity: 0.8;
+}
+
+.main-body {
+  width: 100vw;
 }
 
 section {
@@ -227,6 +237,8 @@ section .container-heading span {
 }
 
 .navbar {
+  width: 100vw;
+  padding: 0.5rem 1rem !important;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(255, 105, 55, 0.2);
 }
@@ -611,6 +623,7 @@ section .container-heading span {
   height: 45px;
   border-radius: 23px;
   padding: 0.375rem 1.25rem;
+  color: #000000;
   text-transform: capitalize;
 }
 .banner.business .business-container .activity .btn i {
@@ -1023,8 +1036,8 @@ section .container-heading span {
 .business-description .board ul {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   list-style: none;
   margin: 0;
 }
@@ -1040,6 +1053,18 @@ section .container-heading span {
 }
 .business-description .board ul li:last-child:after {
   display: none;
+}
+.business-description .board ul li a {
+  color: #000000;
+  text-decoration: underline !important;
+}
+.business-description .board ul li a:hover {
+  opacity: 0.5;
+}
+.business-description .board ul:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .get-app {
@@ -1673,6 +1698,9 @@ form .form-group a.secondary {
   cursor: pointer;
 }
 
+.modal {
+  overflow: hidden !important;
+}
 .modal .btn-close {
   position: absolute;
   top: 20px;

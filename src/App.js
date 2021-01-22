@@ -5,10 +5,9 @@ import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 import './assets/css/styles.css';
 import './assets/css/icon.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // js
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 // fontAwesome

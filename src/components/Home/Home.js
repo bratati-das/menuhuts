@@ -14,14 +14,14 @@ import Stats from './Stats';
 
 function Home() {
     return (
-        <div>            
+        <>
             <Banner />
             <NearResturant />
             <GetApp />
             <Cities />
             <OurRegistration />
-            <Stats />            
-        </div>
+            <Stats />
+        </>
     );
 }
 

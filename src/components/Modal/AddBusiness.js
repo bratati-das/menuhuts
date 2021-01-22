@@ -1,86 +1,91 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { Modal, Form, Button, } from 'react-bootstrap';
 
 
 function AddBusiness() {
+
+    const [show, setShow] = useState(false);
+
+    const addBusinessClose = () => setShow(false);
+    const addBusinessShow = () => setShow(true);
+
     return (
-        <div className="modal fade" id="addBusiness" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h1 className="modal-title"><span>Let’s</span> get started</h1>
-                        <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                        <form>
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your first name</label>
-                                <input type="text" className="form-control box" id="" placeholder="First name" />
-                            </div>
+        <>
+            <Link to={``} className="add-business" onClick={addBusinessShow}>Add Business</Link>
+            <Modal show={show} onHide={addBusinessClose}>
+                <Modal.Header closeButton>
+                    <h1 className="modal-title"><span>Let’s</span> get started</h1>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>Enter your first name</Form.Label>
+                            <Form.Control type="text" className="box" id="" placeholder="First name" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your last name</label>
-                                <input type="text" className="form-control box" id="" placeholder="Last name" />
-                            </div>
+                        <Form.Group>
+                            <Form.Label>Enter your last name</Form.Label>
+                            <Form.Control type="text" className="box" id="" placeholder="Last name" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your mobile number</label>
-                                <input type="text" className="form-control box" id="" placeholder="Mobile number" />
-                            </div>
+                        <Form.Group>
+                            <Form.Label>Enter your mobile number</Form.Label>
+                            <Form.Control type="text" className="box" id="" placeholder="Mobile number" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your business name</label>
-                                <input type="text" className="form-control box" id="" placeholder="Business name" />
-                            </div>
+                        <Form.Group>
+                            <Form.Label>Enter your business name</Form.Label>
+                            <Form.Control type="text" className="box" id="" placeholder="Business name" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Select your country</label>
-                                <div className="select-group">
-                                    <select className="form-control box" id="">
-                                        <option selected>Choose country</option>
-                                        <option value="1">America</option>
-                                        <option value="2">India</option>
-                                        <option value="3">Africa</option>
-                                    </select>
-                                </div>
+                        <Form.Group>
+                            <Form.Label>Select your country</Form.Label>
+                            <div className="select-group">
+                                <Form.Control as="select" className="box" id="">
+                                    <option selected>Choose country</option>
+                                    <option value="1">America</option>
+                                    <option value="2">India</option>
+                                    <option value="3">Africa</option>
+                                </Form.Control>
                             </div>
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Select your city</label>
-                                <div className="select-group">
-                                    <select className="form-control box" id="">
-                                        <option selected>Choose city</option>
-                                        <option value="1">Adelaide</option>
-                                        <option value="2">Albany</option>
-                                        <option value="3">Belconnen</option>
-                                    </select>
-                                </div>
+                        <Form.Group>
+                            <Form.Label>Select your city</Form.Label>
+                            <div className="select-group">
+                                <Form.Control as="select" className="box" id="">
+                                    <option selected>Choose city</option>
+                                    <option value="1">Adelaide</option>
+                                    <option value="2">Albany</option>
+                                    <option value="3">Belconnen</option>
+                                </Form.Control>
                             </div>
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your address</label>
-                                <textarea className="form-control box" id="" placeholder="Address"></textarea>
-                            </div>
+                        <Form.Group>
+                            <Form.Label>Enter your address</Form.Label>
+                            <Form.Control as="textarea" className="box" id="" placeholder="Address" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" value="" id="check1" />
-                                    <label className="form-check-label" for="check1">
-                                        Accepting <Link className="secondary" to={``}>terms of service</Link> and <Link className="secondary" to={``}>privacy policy</Link>
-                                    </label>
-                                </div>
+                        <Form.Group>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="check1" />
+                                <label className="form-check-label" for="check1">
+                                    Accepting <Link className="secondary" to={``}>terms of service</Link> and <Link className="secondary" to={``}>privacy policy</Link>
+                                </label>
                             </div>
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <button type="submit" className="btn btn-secondary box">Next </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <Form.Group>
+                            <button type="submit" className="btn btn-secondary box">Next </button>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                </Modal.Footer>
+            </Modal>
+        </>
     );
 }
 

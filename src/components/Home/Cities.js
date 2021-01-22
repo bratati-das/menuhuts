@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import { Container, Row, Col, Form, Button, InputGroup, } from "react-bootstrap";
 
 
 
@@ -8,27 +8,27 @@ import { Link } from "react-router-dom";
 function Cities() {
     return (
         <section className="choose-city">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="city-heading">
                         <h1 className="container-heading">
                             <span>Choose</span> your city
                         </h1>
-                        <form className="select-country">
-                            <div className="form-group">
-                                <div className="input-group select-group">
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text"><i className="fas fa-globe-americas"></i></span>
-                                    </div>
-                                    <select className="form-control" id="">
+                        <Form className="select-country">
+                            <Form.Group>
+                                <InputGroup className="select-group">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text><i className="fas fa-globe-americas"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <Form.Control as="select">
                                         <option selected>Australia</option>
                                         <option value="1">America</option>
                                         <option value="2">India</option>
                                         <option value="4">Africa</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
+                                    </Form.Control>
+                                </InputGroup>
+                            </Form.Group>
+                        </Form>
                     </div>
 
                     <ul className="city-list row">
@@ -65,8 +65,8 @@ function Cities() {
                             </div>
                         </div>
                     </form> */}
-                </div>
-            </div>
+                </Col>
+            </Container>
         </section>
     );
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -22,9 +23,9 @@ const options = {
     nav: true,
     dots: false,
     smartSpeed: 1000,
-    autoplay:true,
-    autoplayTimeout:2000,
-    autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
     responsive: {
         0: {
             items: 2,
@@ -59,8 +60,8 @@ class Cuisine extends React.Component {
     render() {
         return (
             <div className="cuisine">
-                <div className="container-fluid">
-                    <div className="col-12 cuisine-card">
+                <Container fluid>
+                    <Col className="cuisine-card">
                         <OwlCarousel className="owl-theme" {...options}>
                             <Link to={``} className="item">
                                 <img src={americanFood} className="cuisine-icon" alt="Menuhuts" />
@@ -95,8 +96,8 @@ class Cuisine extends React.Component {
                                 <h5>Drinks</h5>
                             </Link>
                         </OwlCarousel>
-                    </div>
-                </div>
+                    </Col>
+                </Container>
             </div>
         )
     };

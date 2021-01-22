@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 
 // img
@@ -13,8 +14,8 @@ import review from '../../assets/img/rating.png';
 function Stats() {
     return (
         <section className="stats">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="stats-cont">
                         <div className="item">
                             <div className="details">
@@ -56,8 +57,8 @@ function Stats() {
                             <img src={review} alt="Menuhuts" />
                         </div>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Container>
         </section>
     );
 }

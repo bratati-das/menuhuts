@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 
 // img
@@ -10,8 +11,8 @@ import img2 from '../../assets/img/registartion2.png';
 function OurRegistration() {
     return (
         <section className="our-registration">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="res-cont row">
                         <div className="items col-md-6 col-sm-6">
                             <img src={img1} alt="Menuhuts" />
@@ -28,8 +29,8 @@ function OurRegistration() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Container>
         </section>
     );
 }

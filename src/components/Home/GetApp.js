@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Container, Col, Button } from "react-bootstrap";
 
 // img
 import appLogo from '../../assets/img/app-logo.png';
@@ -10,8 +11,8 @@ import appLogo from '../../assets/img/app-logo.png';
 function GetApp() {
     return (
         <section className="get-app">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="app-cont">
                         <div className="app-left">
                             <div className="app-icon">
@@ -24,18 +25,18 @@ function GetApp() {
                         </div>
 
                         <div className="app-redirect">
-                            <button className="outline">
+                            <Button className="outline">
                                 <i className="fab fa-android"></i>
                                 <span>Android</span>
-                            </button>
-                            <button className="outline">
+                            </Button>
+                            <Button className="outline">
                                 <i className="fab fa-apple"></i>
                                 <span>iPhone</span>
-                            </button>
+                            </Button>
                         </div>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Container>
         </section>
     )
 }

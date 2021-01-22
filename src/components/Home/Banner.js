@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col, Form, Button, InputGroup, } from "react-bootstrap";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -11,42 +12,41 @@ import Cuisine from './Cuisine';
 function Banner() {
     return (
         <section className="banner">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <h1>Your favorite restaurants?</h1>
                     <h4>Direct to your door in few minutes!</h4>
 
-                    <form>
-                        <div className="form-group">
-                            <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text"><i className="fas fa-map-marker-alt"></i></span>
-                                </div>
-                                <input type="text" className="form-control" name="" id="" placeholder="Enter business near me by zipcode" />
-                            </div>
+                    <Form>
+                        <Form.Group>
+                            <InputGroup>
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text><i className="fas fa-map-marker-alt"></i></InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control id="" placeholder="Enter business near me by zipcode" />
+                            </InputGroup>
 
-                            {/* <div className="input-group select-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text"><i className="fas fa-clock"></i></span>
-                                </div>
-                                <select className="form-control" id="">
+                            <InputGroup className="select-group">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text><i className="fas fa-clock"></i></InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control as="select">
                                     <option selected>Deliver now</option>
                                     <option value="1">Schedule for later</option>
-                                    
-                                </select>
-                            </div>                            */}
+                                </Form.Control>
+                            </InputGroup>
 
-                            <Link to={`/BusinessList`}><button type="submit" className="btn btn-primary">Search</button></Link>
+                            <Link to={`/BusinessList`}><Button variant="primary" type="submit">Search</Button></Link>
 
-                        </div>
-                    </form>
+                        </Form.Group>
+                    </Form>
 
 
                     <h5 className="btm-txt">
                         <Link to={``} data-toggle="modal" data-target="#signUp">Register</Link> with your recent address
                     </h5>
-                </div>
-            </div>
+                </Col>
+            </Container>
             <Cuisine />
         </section>
     );

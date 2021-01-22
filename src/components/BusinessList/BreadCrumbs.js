@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import { Container, Col } from "react-bootstrap";
 
 
 function BreadCrumbs() {
     return (
         <section className="breadcumbs">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="body-top">
                         <ul>
                             <li><Link to={``}>Australia</Link></li>
@@ -16,8 +16,8 @@ function BreadCrumbs() {
                         <Link to={``} className="filter"><i className="fas fa-filter"></i> Filter</Link>
 
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Container>
         </section>
     );
 }

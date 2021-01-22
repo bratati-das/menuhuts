@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Container, Col } from "react-bootstrap";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -45,14 +46,14 @@ class NearResturant extends React.Component {
 
         return (
             <section className="near-resturants">
-                <div className="container-fluid">
-                    <div className="col-12">
+                <Container fluid>
+                    <Col>
                         <h1 className="container-heading">
                             <span>Restaurants</span> near me
                         </h1>
 
                         <OwlCarousel className="owl-theme" {...options}>
-                            <Link to={``} className="item">
+                            <Link to={`/Business`} className="item">
                                 <div className="rest-cover">
                                     <img src={restImg1} className="cover-img" alt="Menuhuts" />
                                     <img src={logo1} className="rest-logo" alt="Menuhuts" />
@@ -73,7 +74,7 @@ class NearResturant extends React.Component {
 
                                 <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                             </Link>
-                            <Link to={``} className="item">
+                            <Link to={`/Business`} className="item">
                                 <div className="rest-cover">
                                     <img src={restImg2} className="cover-img" alt="Menuhuts" />
                                     <img src={logo2} className="rest-logo" alt="Menuhuts" />
@@ -93,7 +94,7 @@ class NearResturant extends React.Component {
 
                                 <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                             </Link>
-                            <Link to={``} className="item">
+                            <Link to={`/Business`} className="item">
                                 <div className="rest-cover">
                                     <img src={restImg3} className="cover-img" alt="Menuhuts" />
                                     <img src={logo3} className="rest-logo" alt="Menuhuts" />
@@ -113,7 +114,7 @@ class NearResturant extends React.Component {
 
                                 <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                             </Link>
-                            <Link to={``} className="item">
+                            <Link to={`/Business`} className="item">
                                 <div className="rest-cover">
                                     <img src={restImg2} className="cover-img" alt="Menuhuts" />
                                     <img src={logo2} className="rest-logo" alt="Menuhuts" />
@@ -134,8 +135,8 @@ class NearResturant extends React.Component {
                                 <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                             </Link>
                         </OwlCarousel>
-                    </div>
-                </div>
+                    </Col>
+                </Container>
             </section>
         )
     };

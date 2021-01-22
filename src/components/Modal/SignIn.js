@@ -1,55 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { Modal, Form, Button, } from 'react-bootstrap';
+
+// components
+import SignUp from "./SignUp";
+import ForgotPassword from "./ForgotPassword";
+
+// img
+import logo from '../../assets/img/menuhuts_logo.png';
+import user from '../../assets/img/user.png';
 
 
 function SignIn() {
+
+    const [show, setShow] = useState(false);
+
+    const signInClose = () => setShow(false);
+    const signInShow = () => setShow(true);
+
     return (
-        <div className="modal fade" id="signIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h1 className="modal-title"><span>Sign</span> in now</h1>
-                        <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body">
-                        <form>
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter your email</label>
-                                <input type="text" className="form-control box" id="" placeholder="Email" />
-                            </div>
+        <>
+            <Link to={``} onClick={signInShow}>
+                <img src={user} className="nav-icon" alt="Menuhuts" />
+                <span>Sign in</span>
+            </Link>
 
-                            <div className="form-group">
-                                <label for="" className="form-label">Enter a password</label>
-                                <input type="password" className="form-control box" id="" placeholder="Password" />
-                                <i className="far fa-eye-slash show-password"></i>
-                                {/* <i className="far fa-eye show-password"></i> */}
-                            </div>
+            <Modal show={show} onHide={signInClose}>
+                <Modal.Header closeButton>
+                    <h1 className="modal-title"><span>Sign</span> in now</h1>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>Enter your email</Form.Label>
+                            <Form.Control type="email" className="box" placeholder="Email" />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <button type="submit" className="btn btn-secondary box">Sign in</button>
-                            </div>
+                        <Form.Group>
+                            <Form.Label>Enter a password</Form.Label>
+                            <Form.Control type="password" className="box" placeholder="Password" />
+                            <i className="far fa-eye-slash show-password"></i>
+                            {/* <i className="far fa-eye show-password"></i> */}
+                        </Form.Group>
 
-                            <div className="form-group d-flex justify-content-between">
-                                <span>New to MenuHuts? <Link className="secondary" to={``} data-toggle="modal" data-target="#signUp" data-dismiss="modal">Create an account</Link></span>
-                                <Link to={``} data-toggle="modal" data-target="#forgotPassword" data-dismiss="modal">Forgot?</Link>
-                            </div>
+                        <Form.Group>
+                            <Button variant="secondary" type="submit" className="box">Sign in</Button>
+                        </Form.Group>
 
-                            <div className="form-group otherwise">
-                                <span>Or</span>
-                            </div>
+                        <Form.Group className="d-flex justify-content-between">
+                            <span>New to MenuHuts? <SignUp /></span>
+                            <ForgotPassword />
+                        </Form.Group>
 
-                            <div className="form-group">
-                                <button type="submit" className="btn btn-facebook"><i className="fab fa-facebook-f"></i> Continue with Facebook</button>
-                                <button type="submit" className="btn btn-google"><i className="fab fa-google"></i> Continue with Google</button>
-                            </div>
+                        <Form.Group className="otherwise">
+                            <span>Or</span>
+                        </Form.Group>
 
-                        </form>
-                    </div>
-                    <div className="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <Form.Group>
+                            <Button type="submit" className="btn-facebook"><i className="fab fa-facebook-f"></i> Continue with Facebook</Button>
+                            <Button type="submit" className="btn-google"><i className="fab fa-google"></i> Continue with Google</Button>
+                        </Form.Group>
+
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                </Modal.Footer>
+            </Modal>
+        </>
     );
 }
 

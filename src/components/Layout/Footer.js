@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from 'react-bootstrap';
 
 
 // img
@@ -11,11 +12,11 @@ import playStore from '../../assets/img/play-store.png';
 function Footer() {
     return (
         <footer>
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <div className="ftr-top">
-                        <div className="row">
-                            <div className="col-md-6 col-sm-6">
+                        <Row>
+                            <Col md={6} sm={6}>
                                 <img src={logo} className="logo" alt="Menuhuts" />
 
                                 <div className="download-app">
@@ -26,22 +27,22 @@ function Footer() {
                                         <img src={playStore} alt="Menuhuts" />
                                     </Link>
                                 </div>
-                            </div>
-                            <div className="col-md-3 col-sm-3">
+                            </Col>
+                            <Col md={3} sm={3}>
                                 <ul className="other-links row">
                                     <li className="col-12"><Link to={``}>About Us</Link></li>
                                     <li className="col-12"><Link to={``}>Our Products</Link></li>
                                     <li className="col-12"><Link to={``}>Pricing</Link></li>
                                     <li className="col-12"><Link to={``}>Privacy</Link></li>
                                 </ul>
-                            </div>
-                            <div className="col-md-3 col-sm-3">
+                            </Col>
+                            <Col md={3} sm={3}>
                                 <ul className="other-links row">
                                     <li className="col-12"><Link to={``}>Contact Us</Link></li>
                                     <li className="col-12"><Link to={``}>Help</Link></li>
                                 </ul>
-                            </div>
-                        </div>
+                            </Col>
+                        </Row>
                     </div>
                     <div className="ftr-btm">
                         <ul className="social">
@@ -96,8 +97,8 @@ function Footer() {
                         </div>
 
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Container>
         </footer>
     );
 }

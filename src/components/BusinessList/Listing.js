@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 // img
 import restImg1 from '../../assets/img/rest1.jpg';
@@ -29,14 +30,14 @@ import logo11 from '../../assets/img/rest-logo11.png';
 function Listing() {
     return (
         <section className="business-list">
-            <div className="container-fluid">
-                <div className="col-12">
+            <Container fluid>
+                <Col>
                     <h1 className="container-heading">
                         10 Restaurants
                     </h1>
 
-                    <div className="row">
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                    <Row>
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg1} className="cover-img" alt="Menuhuts" />
                                 <img src={logo1} className="rest-logo" alt="Menuhuts" />
@@ -60,7 +61,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg2} className="cover-img" alt="Menuhuts" />
                                 <img src={logo2} className="rest-logo" alt="Menuhuts" />
@@ -84,7 +85,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg3} className="cover-img" alt="Menuhuts" />
                                 <img src={logo3} className="rest-logo" alt="Menuhuts" />
@@ -108,7 +109,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg4} className="cover-img" alt="Menuhuts" />
                                 <img src={logo4} className="rest-logo" alt="Menuhuts" />
@@ -132,7 +133,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg5} className="cover-img" alt="Menuhuts" />
                                 <img src={logo5} className="rest-logo" alt="Menuhuts" />
@@ -156,7 +157,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg6} className="cover-img" alt="Menuhuts" />
                                 <img src={logo6} className="rest-logo" alt="Menuhuts" />
@@ -180,7 +181,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg7} className="cover-img" alt="Menuhuts" />
                                 <img src={logo7} className="rest-logo" alt="Menuhuts" />
@@ -204,7 +205,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg8} className="cover-img" alt="Menuhuts" />
                                 <img src={logo8} className="rest-logo" alt="Menuhuts" />
@@ -228,7 +229,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg9} className="cover-img" alt="Menuhuts" />
                                 <img src={logo9} className="rest-logo" alt="Menuhuts" />
@@ -252,7 +253,7 @@ function Listing() {
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
                         </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg10} className="cover-img" alt="Menuhuts" />
                                 <img src={logo10} className="rest-logo" alt="Menuhuts" />
@@ -274,9 +275,9 @@ function Listing() {
                             </div>
 
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
-                        </Link> 
+                        </Link>
 
-                        <Link to={``} className="item col-lg-4 col-md-6 col-sm-12">
+                        <Link to={`/Business`} className="item col-lg-4 col-md-6 col-sm-12">
                             <div className="rest-cover">
                                 <img src={restImg11} className="cover-img" alt="Menuhuts" />
                                 <img src={logo11} className="rest-logo" alt="Menuhuts" />
@@ -298,10 +299,10 @@ function Listing() {
                             </div>
 
                             <span className="rest-address">135 Nelson Place, Williamstown VIC 3016, Australia</span>
-                        </Link> 
-                    </div>
-                </div>
-            </div>
+                        </Link>
+                    </Row>
+                </Col>
+            </Container>
         </section>
     );
 }
