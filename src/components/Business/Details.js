@@ -2,29 +2,27 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Container, Col } from "react-bootstrap";
 
-
-import background from './../../assets/img/rest1.jpg';
-import logo from '../../assets/img/rest-logo1.png';
-
+// components
+import BusinessTab from './BusinessTab';
 
 
 function Details() {
     return (
         <>
             <section className="business-offer">
-            <Container fluid>
-                <Col>
+                <Container fluid>
+                    <Col>
                         <ul>
                             <li>Delivery free minimum order $100</li>
                             <li>10% OFF for first time order</li>
                         </ul>
-                        </Col>
-            </Container>
+                    </Col>
+                </Container>
             </section>
 
             <section className="business-description">
-            <Container fluid>
-                <Col>
+                <Container fluid>
+                    <Col>
                         <div className="board">
                             <ul>
                                 <li>6133 E Ben White Blvd, Austin, TX 78741</li>
@@ -73,8 +71,11 @@ function Details() {
                                 </li>
                             </ul>
                         </div>
-                        </Col>
-            </Container>
+                    </Col>
+                    <Col className="main-nav-container">
+                        <BusinessTab />
+                    </Col>
+                </Container>
             </section>
 
         </>

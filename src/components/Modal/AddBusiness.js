@@ -78,7 +78,7 @@ function AddBusiness() {
                         </Form.Group>
 
                         <Form.Group>
-                            <button type="submit" className="btn btn-secondary box">Next </button>
+                            <Button type="submit" className="btn btn-secondary box">Next </Button>
                         </Form.Group>
                     </Form>
                 </Modal.Body>

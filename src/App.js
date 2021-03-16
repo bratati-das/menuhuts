@@ -22,6 +22,9 @@ import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
 import BusinessList from './components/BusinessList/BusinessList';
 import Business from './components/Business/Business';
+import Checkout from './components/Checkout/Checkout';
+import Confirmation from './components/Confirmation/Confirmation';
+import Profile from './components/Profile/Profile';
 
 
 // library.add(fab,);
@@ -50,6 +53,30 @@ function App() {
           render={() => (
             <Layout>
               <Business />
+            </Layout>
+          )}
+        />
+
+        <Route path="/Checkout"
+          render={() => (
+            <Layout>
+              <Checkout />
+            </Layout>
+          )}
+        />
+
+        <Route path="/Confirmation"
+          render={() => (
+            <Layout>
+              <Confirmation />
+            </Layout>
+          )}
+        />
+
+        <Route path="/Profile"
+          render={() => (
+            <Layout>
+              <Profile />
             </Layout>
           )}
         />

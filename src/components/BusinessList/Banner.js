@@ -19,7 +19,7 @@ function Banner() {
                                 <Form.Control id="" placeholder="Enter business near me by zipcode" />
                             </InputGroup>
 
-                            <Button variant="primary" type="submit">Search</Button>
+                            <Link to={`/Checkout`}><Button variant="primary" type="submit">Search</Button></Link>
 
                         </Form.Group>
                     </Form>

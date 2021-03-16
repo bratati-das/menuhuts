@@ -6,6 +6,10 @@ import { Navbar, Container } from 'react-bootstrap';
 // components
 import SignIn from './../Modal/SignIn';
 import AddBusiness from './../Modal/AddBusiness';
+import ProductDetails from './../Modal/ProductDetails/ProductDetails';
+import FilterBusiness from './../Modal/FilterBusiness';
+import PreOrder from './../Modal/PreOrder';
+import Cart from './Cart';
 
 
 // img
@@ -32,7 +36,14 @@ function Header() {
                         </li>
 
                         <li>
+                            <Cart />
+                        </li>
+
+                        <li>
                             <AddBusiness />                            
+                            {/* <ProductDetails />*/}
+                            {/* <FilterBusiness /> */}
+                            {/* <PreOrder /> */}
                         </li>
                     </ul>
                 </Container>

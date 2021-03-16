@@ -40,6 +40,7 @@ function Footer() {
                                 <ul className="other-links row">
                                     <li className="col-12"><Link to={``}>Contact Us</Link></li>
                                     <li className="col-12"><Link to={``}>Help</Link></li>
+                                    <li className="col-12"><Link to={`/Profile`}>Profile</Link></li>
                                 </ul>
                             </Col>
                         </Row>
