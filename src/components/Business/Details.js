@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Form, InputGroup } from "react-bootstrap";
 
 // components
 import BusinessTab from './BusinessTab';
@@ -30,6 +30,21 @@ function Details() {
                                 <li>09:00–21:00</li>
                             </ul>
                             <ul>
+                                <li>
+                                    <Form className="order-type-change">
+                                        <Form.Group>
+                                            <InputGroup className="select-group">
+                                                <InputGroup.Prepend>
+                                                    <InputGroup.Text><i className="fas fa-clock"></i></InputGroup.Text>
+                                                </InputGroup.Prepend>
+                                                <Form.Control as="select">
+                                                    <option selected>Delivery</option>
+                                                    <option value="1">Pickup</option>
+                                                </Form.Control>
+                                            </InputGroup>
+                                        </Form.Group>
+                                    </Form>
+                                </li>
                                 <li><Link to={``}>Preorder</Link></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="86.43" height="14.04" viewBox="0 0 126.889 20.619">

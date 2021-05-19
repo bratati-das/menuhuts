@@ -5,6 +5,8 @@ import { Modal, Form, Button, } from 'react-bootstrap';
 // components
 import ProductOptions from './ProductOptions';
 
+import ProductListingSingle from './../../Business/ProductListingSingle'
+
 // img
 import prodImg from './../../../assets/img/prod-1.jpg';
 
@@ -18,9 +20,10 @@ function ProductDetails() {
 
     return (
         <>
-            {/* <Link to={``} onClick={productDetailsShow}>
-                <span>Product details</span>
-            </Link> */}
+            <Link to={``} onClick={productDetailsShow}>
+                <ProductListingSingle/>
+                {/* <span>Product details</span> */}
+            </Link>
 
             <Modal show={show} onHide={productDetailsClose} className="product-details-popup">
                 <Modal.Header closeButton>

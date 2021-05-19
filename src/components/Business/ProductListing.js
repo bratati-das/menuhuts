@@ -1,6 +1,9 @@
 import React, { } from 'react';
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Row, Col, } from "react-bootstrap";
+
+// components
+import ProductDetails from './../Modal/ProductDetails/ProductDetails';
 
 // img
 import prodImg1 from './../../assets/img/prod-1.jpg';
@@ -16,7 +19,7 @@ import prodImg6 from './../../assets/img/prod-6.jpg';
 function ProductListing() {
 
     return (
-        <>
+        <Router>
 
             <div className="items-sec" id="">
                 <h4 className="category">Entree</h4>
@@ -28,21 +31,12 @@ function ProductListing() {
                     <li>Haryali Banno</li>
                 </ul>
                 <Row className="list-container">
+
+
                     <Col lg={4} md={6} sm={12}>
-                        <div className="items">
-                            <div className="product-description">
-                                <div className="top">
-                                    <h5>Vegetable Pakora</h5>
-                                    <p>Vegetables mixed in herbs and spices, dipped in batter and fried, dipped in batter and fried.</p>
-                                </div>
-                                <div className="btm">
-                                    <h5 className="price">$9.99</h5>
-                                    <span className="veg"></span>
-                                </div>
-                            </div>
-                            <img src={prodImg1} className="product-img" alt="Menuhuts" />                            
-                        </div>
+                        <ProductDetails />
                     </Col>
+
                     <Col lg={4} md={6} sm={12}>
                         <div className="items added-items">
                             <span className="added-quantity">2</span>
@@ -181,7 +175,7 @@ function ProductListing() {
             </div>
 
 
-        </>
+        </Router>
     );
 }
 

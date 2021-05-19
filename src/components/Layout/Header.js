@@ -9,6 +9,7 @@ import AddBusiness from './../Modal/AddBusiness';
 import ProductDetails from './../Modal/ProductDetails/ProductDetails';
 import FilterBusiness from './../Modal/FilterBusiness';
 import PreOrder from './../Modal/PreOrder';
+import ChangeOrderType from './../Modal/ChangeOrderType';
 import Cart from './Cart';
 
 
@@ -41,9 +42,10 @@ function Header() {
 
                         <li>
                             <AddBusiness />                            
-                            {/* <ProductDetails />*/}
+                            {/* <ProductDetails /> */}
                             {/* <FilterBusiness /> */}
                             {/* <PreOrder /> */}
+                            {/* <ChangeOrderType /> */}
                         </li>
                     </ul>
                 </Container>
