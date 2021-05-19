@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/menuhuts/static/css/main.93c3fd63.chunk.css",
-    "main.js": "/menuhuts/static/js/main.23375f7c.chunk.js",
-    "main.js.map": "/menuhuts/static/js/main.23375f7c.chunk.js.map",
+    "main.css": "/menuhuts/static/css/main.b2e203c4.chunk.css",
+    "main.js": "/menuhuts/static/js/main.6d3743e3.chunk.js",
+    "main.js.map": "/menuhuts/static/js/main.6d3743e3.chunk.js.map",
     "runtime-main.js": "/menuhuts/static/js/runtime-main.dae3f86d.js",
     "runtime-main.js.map": "/menuhuts/static/js/runtime-main.dae3f86d.js.map",
     "static/css/2.83ad5a81.chunk.css": "/menuhuts/static/css/2.83ad5a81.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.1283053e.chunk.js.map": "/menuhuts/static/js/3.1283053e.chunk.js.map",
     "index.html": "/menuhuts/index.html",
     "static/css/2.83ad5a81.chunk.css.map": "/menuhuts/static/css/2.83ad5a81.chunk.css.map",
-    "static/css/main.93c3fd63.chunk.css.map": "/menuhuts/static/css/main.93c3fd63.chunk.css.map",
+    "static/css/main.b2e203c4.chunk.css.map": "/menuhuts/static/css/main.b2e203c4.chunk.css.map",
     "static/js/2.3e95d0dc.chunk.js.LICENSE.txt": "/menuhuts/static/js/2.3e95d0dc.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/menuhuts/static/media/city-bg.d9465f5d.jpg",
     "static/media/american.51e0d548.png": "/menuhuts/static/media/american.51e0d548.png",
@@ -29,6 +29,10 @@
     "static/media/footer_logo.d60c13f3.png": "/menuhuts/static/media/footer_logo.d60c13f3.png",
     "static/media/image.2b629feb.png": "/menuhuts/static/media/image.2b629feb.png",
     "static/media/menuhuts_logo.cb88a869.png": "/menuhuts/static/media/menuhuts_logo.cb88a869.png",
+    "static/media/offer-1.648cc49f.jpg": "/menuhuts/static/media/offer-1.648cc49f.jpg",
+    "static/media/offer-2.80e54d89.jpg": "/menuhuts/static/media/offer-2.80e54d89.jpg",
+    "static/media/offer-3.8493e9f5.jpg": "/menuhuts/static/media/offer-3.8493e9f5.jpg",
+    "static/media/offer-4.d5b6786a.jpg": "/menuhuts/static/media/offer-4.d5b6786a.jpg",
     "static/media/play-store.df21795d.png": "/menuhuts/static/media/play-store.df21795d.png",
     "static/media/prod-1.c8434cd1.jpg": "/menuhuts/static/media/prod-1.c8434cd1.jpg",
     "static/media/prod-2.aaee8819.jpg": "/menuhuts/static/media/prod-2.aaee8819.jpg",
@@ -68,7 +72,7 @@
     "static/js/runtime-main.dae3f86d.js",
     "static/css/2.83ad5a81.chunk.css",
     "static/js/2.3e95d0dc.chunk.js",
-    "static/css/main.93c3fd63.chunk.css",
-    "static/js/main.23375f7c.chunk.js"
+    "static/css/main.b2e203c4.chunk.css",
+    "static/js/main.6d3743e3.chunk.js"
   ]
 }
