@@ -1015,6 +1015,12 @@ section .container-heading span {
     max-width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .banner.business .business-container .details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .banner.business .business-container .details img {
   width: 100px;
   height: 100px;
@@ -1039,7 +1045,9 @@ section .container-heading span {
 }
 @media (max-width: 480px) {
   .banner.business .business-container .details img {
-    display: none;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 15px;
   }
 }
 .banner.business .business-container .details .business-descp {
