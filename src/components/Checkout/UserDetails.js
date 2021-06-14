@@ -18,7 +18,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-user"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-user"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="First name" />
                                     </InputGroup>
@@ -26,7 +26,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-user"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-user"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Last name" />
                                     </InputGroup>
@@ -39,7 +39,7 @@ function UserDetails() {
                                 <Col md={12} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-map-marker-alt"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-map-marker-alt"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Taco Bell (7255 Mission St.)" />
                                     </InputGroup>
@@ -52,7 +52,7 @@ function UserDetails() {
                                 <Col md={12} sm={12}>
                                     <InputGroup className="grey textarea">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-map-marker-alt"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-map-marker-alt"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control as="textarea" id="" placeholder="Delivery address" />
                                     </InputGroup>
@@ -65,7 +65,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-envelope"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-envelope"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Email" />
                                     </InputGroup>
@@ -73,7 +73,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-mobile"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-mobile"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Mobile" />
                                     </InputGroup>
@@ -86,7 +86,7 @@ function UserDetails() {
                                 <Col md={12} sm={12}>
                                     <InputGroup className="grey discount">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-tag"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-tag"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Discount coupon" />
                                         <Button variant="secondary">Apply</Button>
@@ -100,7 +100,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-envelope"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-envelope"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Email" />
                                     </InputGroup>
@@ -108,7 +108,7 @@ function UserDetails() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-mobile"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-mobile"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Mobile" />
                                     </InputGroup>
@@ -136,7 +136,7 @@ function UserDetails() {
                                 <Col md={12} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-money-bill-wave-alt"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-money-bill-wave-alt"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Tips" />
                                     </InputGroup>
@@ -149,7 +149,7 @@ function UserDetails() {
                                 <Col md={12} sm={12}>
                                     <InputGroup className="grey textarea">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-comment"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-comment"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control as="textarea" id="" placeholder="Additional information" />
                                     </InputGroup>

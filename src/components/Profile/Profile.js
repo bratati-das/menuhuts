@@ -25,7 +25,7 @@ function Profile() {
                                     <Form className="avtar-form">
                                         <Form.Group>
                                             <Form.File className="avtar-img" id="" style={{ backgroundImage: `url(${avtar})` }} />
-                                            <i class="fas fa-camera"></i>
+                                            <i className="fas fa-camera"></i>
                                         </Form.Group>
                                     </Form>
 
@@ -37,25 +37,25 @@ function Profile() {
 
                                 <Nav variant="pills" className="flex-column profile-tab">
                                     <Nav.Item>
-                                        <Nav.Link eventKey="UpdateProfile"><i class="fas fa-users"></i>Update profile</Nav.Link>
+                                        <Nav.Link eventKey="UpdateProfile"><i className="fas fa-users"></i>Update profile</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="ChangePassword"><i class="fas fa-key"></i>Change password</Nav.Link>
+                                        <Nav.Link eventKey="ChangePassword"><i className="fas fa-key"></i>Change password</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="FavouriteRestaurant"><i class="fas fa-heart"></i>Favourite restaurant</Nav.Link>
+                                        <Nav.Link eventKey="FavouriteRestaurant"><i className="fas fa-heart"></i>Favourite restaurant</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="OrderHistory"><i class="fas fa-bookmark"></i>Order history</Nav.Link>
+                                        <Nav.Link eventKey="OrderHistory"><i className="fas fa-bookmark"></i>Order history</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="BookingHistory"><i class="fas fa-history"></i>Booking history</Nav.Link>
+                                        <Nav.Link eventKey="BookingHistory"><i className="fas fa-history"></i>Booking history</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="RewardHistory"><i class="fas fa-gift"></i>Reward history</Nav.Link>
+                                        <Nav.Link eventKey="RewardHistory"><i className="fas fa-gift"></i>Reward history</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="LogOut"><i class="fas fa-power-off"></i>Log out</Nav.Link>
+                                        <Nav.Link eventKey="LogOut"><i className="fas fa-power-off"></i>Log out</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>

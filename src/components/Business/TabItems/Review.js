@@ -23,11 +23,11 @@ function Review() {
                                         <span className="date">12-01-2020</span>
                                     </div>
                                     <span className="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star"></i>
                                     </span>
                                 </div>
                             </div>
@@ -45,11 +45,11 @@ function Review() {
                                         <span className="date">21-01-2020</span>
                                     </div>
                                     <span className="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
                                     </span>
                                 </div>
                             </div>
@@ -67,11 +67,11 @@ function Review() {
                                         <span className="date">30-01-2020</span>
                                     </div>
                                     <span className="stars">
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
-                                        <i class="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
+                                        <i className="fas fa-star active"></i>
                                     </span>
                                 </div>
                             </div>
@@ -89,44 +89,44 @@ function Review() {
                                         <div className="feature-points">
                                             <span>Product quality</span>
                                             <span className="stars">
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star"></i>
                                             </span>
                                         </div>
 
                                         <div className="feature-points">
                                             <span>Punctuality</span>
                                             <span className="stars">
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star"></i>
+                                                <i className="fas fa-star"></i>
                                             </span>
                                         </div>
 
                                         <div className="feature-points">
                                             <span>Service</span>
                                             <span className="stars">
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star"></i>
                                             </span>
                                         </div>
 
                                         <div className="feature-points">
                                             <span>Food packing</span>
                                             <span className="stars">
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
+                                                <i className="fas fa-star active"></i>
                                             </span>
                                         </div>
                                     </Col>
@@ -137,7 +137,7 @@ function Review() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-user"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-user"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Name" />
                                         </InputGroup>
@@ -145,7 +145,7 @@ function Review() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-envelope"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-envelope"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Email" />
                                         </InputGroup>
@@ -157,7 +157,7 @@ function Review() {
                                     <Col md={12} sm={12}>
                                         <InputGroup className="grey textarea">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-comment"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-comment"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control as="textarea" id="" placeholder="Message" />
                                         </InputGroup>

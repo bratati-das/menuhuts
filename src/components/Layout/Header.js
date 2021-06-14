@@ -6,9 +6,6 @@ import { Navbar, Container } from 'react-bootstrap';
 // components
 import SignIn from './../Modal/SignIn';
 import AddBusiness from './../Modal/AddBusiness';
-import ProductDetails from './../Modal/ProductDetails/ProductDetails';
-import FilterBusiness from './../Modal/FilterBusiness';
-import PreOrder from './../Modal/PreOrder';
 import ChangeOrderType from './../Modal/ChangeOrderType';
 import Cart from './Cart';
 
@@ -23,7 +20,7 @@ function Header() {
 
     return (
         <Router>
-            <Navbar fixed="top">
+            <Navbar fixed="top" expand="lg">
                 <Container fluid>
                     <Link to={`/`} className="navbar-brand">
                         <img src={logo} className="nav-logo" alt="Menuhuts" />
@@ -31,23 +28,33 @@ function Header() {
 
 
 
-                    <ul className="navbar-right">
-                        <li>
-                            <SignIn />
-                        </li>
+                    <div className="nav-inner-container">
 
-                        <li>
-                            <Cart />
-                        </li>
+                        <ul className="navbar-right">
+                            <li>
+                                <SignIn />
+                            </li>
 
-                        <li>
-                            <AddBusiness />                            
-                            {/* <ProductDetails /> */}
-                            {/* <FilterBusiness /> */}
-                            {/* <PreOrder /> */}
-                            {/* <ChangeOrderType /> */}
-                        </li>
-                    </ul>
+                            <li>
+                                <Cart />
+                            </li>
+
+                            <li>
+                                <AddBusiness />
+                                {/* <ChangeOrderType /> */}
+                            </li>
+                        </ul>
+
+                        <Navbar.Toggle aria-controls="navbarScroll" />
+
+                    </div>
+
+                    <Navbar.Collapse id="navbarScroll">
+                        <ul>
+                            <li><SignIn /></li>
+                            <li><AddBusiness /></li>
+                        </ul>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar >
         </Router>

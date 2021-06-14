@@ -26,8 +26,8 @@ function Banner() {
                             </div>
                         </div>
                         <div className="activity">
-                            <Button><i class="fas fa-plus"></i>Add Reviews</Button>
-                            <span class="favorite"><i class="far fa-heart"></i></span>
+                            <Button><i className="fas fa-plus"></i>Add Reviews</Button>
+                            <span className="favorite"><i className="far fa-heart"></i></span>
                         </div>
                     </div>
                 </Col>

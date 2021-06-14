@@ -181,6 +181,7 @@ p {
 // Scroll
 ::-webkit-scrollbar {
   width: 10px;
+
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -340,7 +341,12 @@ button {
       padding: 0;
       height: auto;
       @include font(r);
-      font-size: 14px;
+      font-size: 14px; 
+      
+      &:focus, &:active {
+        background-color: transparent !important;
+      }
+          
     }
   }
   &:hover {
@@ -350,6 +356,10 @@ button {
 
 .main-body {
   width: calc(100vw - 10px);
+
+  @media (max-width: $lg) {
+    width: 100vw;
+  }
 }
 
 section {
@@ -381,12 +391,19 @@ section {
   }
 }
 
+
 .navbar {
   width: calc(100vw - 10px);
   padding: .5rem 1rem !important;
   background-color: color(wht);
   border-bottom: $border-light;
+
+  @media (max-width: $lg) {
+    width: 100vw;
+  }
+
   .container-fluid {
+
     .navbar-brand {
       margin-right: 0;
       .nav-logo {
@@ -401,25 +418,38 @@ section {
       }
     }
 
+    .nav-inner-container {
+      width: auto;
+      display: inline-flex;
+    }
+
     .navbar-right {
       list-style: none;
       @include end();
       align-items: center;
-      margin: 0;
-      @media (max-width: $mb) {
-        // flex-direction: column;
-      }
+      margin: 0;      
+
       li {
         @include font(m);
         font-size: 16px;
-        margin: 0 10px;
-        @media (max-width: $xs) {
-          font-size: 14px;
-          margin: 0 5px;
-        }
+        margin: 0 10px;        
+
         &:last-child {
           margin-right: 0;
         }
+
+        @media (max-width: $md) {
+          font-size: 14px;
+          margin: 0 5px;
+          display: none;
+
+          &:nth-child(2) {
+            display: inline-block;
+          }
+        }
+        
+
+
         a {
           color: color(blk);
           &:hover {
@@ -460,6 +490,359 @@ section {
             }
           }
         }
+      }
+    }
+    
+    .navbar-collapse {
+      width: 100%;  
+      background-color: color(wht);
+      box-shadow: $shadow;
+      position: absolute;
+      top: 100%;
+      left: 2%;
+      right: 2%;
+      width: 96%;
+
+      @media (min-width: $md+1) {
+        display: none !important;
+      }
+
+
+      ul {
+        list-style: none;  
+        @include start();
+        flex-direction: column;    
+        margin: 10px 10px 20px 10px;
+
+        li {
+          width: 100%;
+          @include font(m);
+          font-size: 16px;
+          padding: 12px 15px;     
+  
+          &:last-child {
+            margin-right: 0;
+          }   
+  
+          a {
+            color: color(blk);
+            &:hover {
+              // color: color(thm);
+              opacity: 0.5;
+            }
+            .nav-icon {
+              width: auto;
+              height: 18px;
+              margin-right: 8px;
+              @media (max-width: $xs) {
+                height: 14px;
+                margin-right: 5px;
+              }
+              @media (max-width: $mb) {
+                display: none;
+              }
+            }
+  
+            &.add-business {
+              width: auto;
+              height: 40px;
+              border-radius: 20px;
+              background-color: color(light-thm);
+              padding: 8px 15px;
+              font-size: 15px;
+              color: color(thm);
+              text-transform: capitalize;
+              &:hover {
+                background-color: color(thm);
+                color: color(wht);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  width: 45px;
+  height: 45px;
+  border-radius: 25px !important;
+  background-color: color(light-thm) !important;
+  border: none !important;
+  color: color(thm) !important;
+  @include center();
+  margin-left: 10px;
+
+  @media (min-width: $md+1) {
+    display: none !important;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,105,55, 1.0)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  width: 2em !important;
+  height: 2em !important;
+}
+
+.cart {
+  button {
+    width: auto;
+    min-width: 60px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 8px 15px;
+    background-color: color(thm) !important;
+    @include font(m);
+    font-size: 16px;
+    color: color(wht);
+    line-height: 0;
+    &:after {
+      display: none;
+    }
+
+    @media (max-width: $md) {
+      min-width: 70px;
+      height: 45px;
+      border-radius: 25px;
+    }
+
+    i {
+      margin-right: 5px;
+      font-size: 16px;
+    }
+  }
+
+  .cart-board {
+    width: auto;
+    min-width: 460px;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: scroll;
+    top: calc(100% + 20px);
+    left: auto;
+    right: 0;
+    border: none;
+    border-radius: 0;
+    background-color: color(wht);
+    box-shadow: $shadow;
+    padding: 25px 25px;
+
+    @media (max-width: $md) {
+      top: calc(100% + 15px);
+    }
+
+    @media (max-width: $xs) {
+      top: calc(100% + 10px);
+      right: -30px;
+      min-width: 400px;
+    }
+
+    @media (max-width: $s) {
+      top: calc(100% + 8px);
+      right: 0px;
+      min-width: 320px;
+    }
+
+    @media (max-width: $mb) {
+      right: -65px;
+      min-width: 300px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    
+
+    h1 {
+      font-size: 26px;
+
+      @media(max-width: $xs) {      
+        font-size: 22px;
+      }
+    }
+    .order-from {
+      font-size: 14px;
+      @include font(m);
+      margin-top: 15px;
+      span {
+        color: color(grey-dark);
+      }
+      a {
+        @include font(m);
+        color: color(thm) !important;
+        text-decoration: underline !important;
+        margin: 0 5px;
+      }
+    }
+    .added-item-cont {
+      width: 100%;
+      margin-top: 25px;
+
+      .added-item {
+        width: 100%;
+        @include start();
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba($color: color(grey-dark), $alpha: 0.3);
+
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border: none;
+        }
+
+
+        @media (max-width: $s) {
+          flex-wrap: wrap;
+        }
+        
+
+        form {
+          max-width: 90px;
+          margin-right: 15px;
+
+          @media (max-width: $s) {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+          }
+
+          
+          .select-group {
+            &:after {
+              right: 10px;
+            }
+          }
+          .form-control {
+            padding-left: 12px;
+            padding-right: 12px;
+            background-color: rgba($color: color(grey), $alpha: 0.3);
+            border-color: rgba($color: color(grey-dark), $alpha: 0.3);
+
+            @media (max-width: $xs) {
+              height: 40px;
+            }
+          }
+        }
+
+        .added-description {
+          width: calc(100% - 90px - 15px);
+          @include between();
+          align-items: flex-start;
+
+          @media (max-width: $s) {
+            width: 100%;
+          }
+
+          
+          .product-desc {
+            width: calc(100% - 88px);
+            .p-name {
+              @include font(m);
+              font-size: 17px;
+              color: color(blk);
+              margin: 12px 0;
+
+              @media (max-width: $xs ) {
+                font-size: 16px;
+              }
+
+            }
+            .extra-items {
+              list-style: none;
+              margin-bottom: 10px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              @media (max-width: $xs ) {
+                margin-bottom: 0px;
+              }
+              li {
+                margin: 0;
+                @include font(r);
+                color: color(txt);
+                font-size: 14px;
+                &.title {
+                  color: color(blk);
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+
+          .product-right {
+            @include end();
+            align-items: center;
+            i {
+              color: color(grey-dark);
+              margin: 0 15px;
+              @media (max-width: $xs ) {
+                font-size: 16px;
+              }
+            }
+            .p-price {
+              @include font(m);
+              font-size: 17px;
+              color: color(thm);
+              margin: 12px 0;
+              @media (max-width: $xs ) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    button {
+      position: relative;
+      margin-top: 25px;
+      width: 100%;
+      height: 50px;
+      border-radius: 0;
+      text-transform: initial;
+
+      .total-items {
+        width: 20px;
+        height: 20px;
+        border: 1px solid color(wht);
+        @include center();
+        font-size: 14px;
+        @include font(r);
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 15px;
+      }
+
+      .total-price {
+        position: absolute;
+        top: calc(50% - 0px);
+        right: 15px;
+        font-size: 14px;
+        @include font(r);
+      }
+    }
+
+    .free-delivery {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      @include font(m);
+      font-size: 15px;
+      color: color(blk);
+
+      @media (max-width: $xs ) {
+        font-size: 14px;
+        margin-top: 15px;
+      }
+
+      span {
+        text-decoration: underline;
+        margin: 0 5px;
       }
     }
   }
@@ -672,10 +1055,20 @@ section {
       width: 100%;
       @include between();
       align-items: flex-end;
+
+      @media (max-width: $md) {
+        flex-wrap: wrap;
+      }
+
       .details {
         @include start();
         align-items: center;
         max-width: 70%;
+
+        @media (max-width: $md) {
+          max-width: 100%;
+        }
+
         img {
           width: 100px;
           height: 100px;
@@ -684,19 +1077,53 @@ section {
           margin-right: 25px;
           background-color: color(wht);
           padding: 5px;
+
+          @media (max-width: $md) {
+            width: 95px;
+            height: 95px;
+            margin-right: 15px;
+          }
+
+          @media (max-width: $xs) {
+            width: 80px;
+            height: 80px;
+          }
+
+          @media (max-width: $s) {
+            display: none;
+          }
         }
+
         .business-descp {
+          max-width: 100%;
+
           h2 {
             margin: 0;
+
+            @media (max-width: $md) {
+              font-size: 30px;
+            }
+
+            @media (max-width: $xs) {
+              font-size: 24px;
+            }
+            @media (max-width: $mb) {
+              font-size: 22px;
+            }
+
           }
           ul {
             @include start();
+            flex-wrap: wrap;
             list-style: none;
             margin-top: 5px;
             margin-bottom: 0;
             li {
               @include font(m);
               font-size: 17px;
+              @media (max-width: $mb) {
+                font-size: 16px;
+              }
               &:after {
                 content: "•";
                 margin: 0 5px;
@@ -713,6 +1140,17 @@ section {
       .activity {
         @include end();
         align-items: center;
+
+        @media (max-width: $md) {
+          width: 100%;          
+          justify-content: flex-end;
+          margin-top: 15px;
+        }
+
+        @media (max-width: $s) {
+          margin-top: 20px;
+        }
+
         .btn {
           background-color: color(wht);
           height: 45px;
@@ -753,6 +1191,10 @@ section {
       position: absolute;
       bottom: -25px;
       height: auto;
+      @media (max-width: $mb) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
       .col {
         padding: 0;
       }
@@ -786,14 +1228,34 @@ section {
         box-shadow: $shadow;
         padding: 10px 10px;
         color: color(wht);
+        @media (max-width: $sm) {
+          width: 80px;
+          height: 80px;
+        }
+        @media (max-width: $xs) {
+          width: 60px;
+          height: 60px;
+        }
         span {
           &:first-child {
             @include font(m);
             font-size: 32px;
+            @media (max-width: $sm) {
+              font-size: 22px;
+            }
+            @media (max-width: $xs) {
+              font-size: 18px;
+            }
           }
           &:last-child {
             @include font(l);
             font-size: 18px;
+            @media (max-width: $sm) {
+              font-size: 15px;
+            }
+            @media (max-width: $xs) {
+              font-size: 13px;
+            }
           }
         }
       }
@@ -816,9 +1278,12 @@ section {
       padding: 20px 0;
     }
     ul {
+      width: auto;
       list-style: none;
       display: inline-flex;
       margin-bottom: 0;
+      margin-right: 10px;
+
       li {
         @include font(m);
         font-size: 16px;
@@ -838,6 +1303,10 @@ section {
           color: color(thm);
           &:hover {
             opacity: 0.8;
+          }
+
+          @media (max-width: $xs) {
+            font-size: 15px;
           }
         }
       }
@@ -1038,6 +1507,7 @@ section {
         ul {
           width: 100%;
           @include start();
+          flex-wrap: wrap;
           margin: 0;
           margin-top: 10px;
           list-style: none;
@@ -1131,15 +1601,30 @@ section {
 .business-offer {
   background-color: color(light-thm);
   padding: 16px 0;
+  text-align: center;
+
+  @media (max-width: $xs) {
+    padding: 10px 15px;
+  }
+
   ul {
     width: 100%;
     @include center();
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
+    @media (max-width: $sm) {
+      display: inline-block;
+    }
     li {
       @include font(m);
       font-size: 16px;
       color: color(thm);
+
+      @media (max-width: $xs) {
+        font-size: 15px;
+      }
+
       &:after {
         content: "|";
         font-size: 14px;
@@ -1148,6 +1633,18 @@ section {
       &:last-child {
         &:after {
           display: none;
+
+          @media (max-width: $xs) {
+            display: inline-block;
+          }
+        }
+      }
+
+      &:before {
+        @media (max-width: $xs) {
+          content: "|";
+          font-size: 14px;
+          margin: 0 10px;
         }
       }
     }
@@ -1160,12 +1657,25 @@ section {
     width: 100%;
     @include between();
     margin: 45px 0;
+
+    @media (max-width: $md) {
+      @include center();
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
+
     ul {
       // width: 100%;
       width: auto;
       @include start();
+      flex-wrap: wrap;
       list-style: none;
       margin: 0;
+
+      @media (max-width: $md) {
+        @include center();
+      }
+
       li {
         @include font(r);
         font-size: 16px;
@@ -1192,7 +1702,14 @@ section {
         @include end();
         align-items: center;
         width: auto;
-        margin-left: 20px;        
+        margin-left: 20px;     
+        
+        @media (max-width: $md) {
+          margin-left: 0;
+          margin-top: 20px;
+          @include center();
+          flex-wrap: wrap;
+        }
 
         li {
 
@@ -1212,6 +1729,10 @@ section {
             width: auto;
             min-width: 100px;
             display: inline-flex;
+
+            @media (max-width: $md) {
+              min-width: auto;
+            }
 
             .form-group {
               margin: 0;
@@ -1236,6 +1757,10 @@ section {
               padding-left: 0;
               padding-right: 1rem;
 
+              @media (max-width: $md) {
+                padding-right: 15px;
+              }
+
               option {
                 color: color(blk);
               }
@@ -1250,6 +1775,10 @@ section {
                   font-size: 17px;
                   background-color: transparent;
                   border: none;
+
+                  @media (max-width: $md) {
+                    padding: 0.375rem 0.5rem 0.375rem 15px;
+                  }
                 }
               }
             }
@@ -1260,6 +1789,15 @@ section {
   }
   .business-tab {
     border-bottom: 1px solid color(grey);
+    
+    @media (max-width: $sm) {
+      white-space: nowrap;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      @include start();
+      flex-wrap: nowrap;
+    }
 
     .nav-item {
       &.nav-link, .nav-link {
@@ -1286,6 +1824,15 @@ section {
           border-bottom-color: color(grey);
           opacity: .8;
         }
+
+        @media (max-width: $sm) {
+          margin-right: 25px;
+          font-size: 18px;
+        }
+        @media (max-width: $xs) {
+          font-size: 17px;
+        }
+
       }
     }
   }
@@ -1298,14 +1845,35 @@ section {
       .menuNav, .menu-nav {
         border-bottom: 1px solid color(grey);
         background-color: color(wht);
+
+        @media (max-width: $lg) {
+          white-space: nowrap;
+          width: 100%;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          @include start();
+          flex-wrap: nowrap;
+        }
+
         .nav-item {
           margin-right: 40px;
+          
           &:last-child {
             margin-right: 0;
           }
+
+          @media (max-width: $lg) {
+            margin-right: 20px;
+          }
+
           &.more {
             position: absolute;
             right: 15px;
+            @media (max-width: $lg) {
+              position: relative;
+              right: auto;
+              margin: 0 20px;
+            }
           }
           &:hover, &:focus, &.show .nav-link  {
             border-color: color(wht);
@@ -1352,6 +1920,12 @@ section {
         top: 77px;
         left: 0;
         z-index: 2;
+        @media (max-width: $xs) {
+          top: 65px;
+        }
+        @media (max-width: $mb) {
+          top: 55px;
+        }
         .nav-item {
           .nav-link {
             padding-top: 24px;
@@ -1364,6 +1938,11 @@ section {
       .items-sec {
         width: 100%;
         margin-top: 65px;
+
+        @media (max-width: $md) {
+          margin-top: 45px;
+        }
+
         .category {
           @include font(m);
           color: color(blk);
@@ -1410,6 +1989,9 @@ section {
             margin-bottom: 30px;
             &:last-child, &:nth-last-child(2), &:nth-last-child(3) {
               margin-bottom: 0;
+              @media (max-width: $md) {
+                margin-bottom: 30px;
+              }
             }
             .items {
               width: 100%;
@@ -1499,6 +2081,9 @@ section {
                 height: 158px;
                 object-fit: cover;
                 object-position: center;
+                @media (max-width: $xs) {
+                  width: 120px;
+                }
               }
             } 
           }         
@@ -1511,6 +2096,9 @@ section {
        color: color(txt);
        line-height: 25px;
        margin-top: 65px;
+        @media (max-width: $md) {
+          margin-top: 45px;
+        }
       }
     }
   }
@@ -1862,6 +2450,7 @@ section {
         }
         @media (max-width: $xs) {
           width: 40%;
+          font-size: 14px;
         }
         @media (max-width: $mb) {
           width: 100%;
@@ -1894,6 +2483,9 @@ section {
         i.fab {
           font-size: 22px;
           margin-right: 10px;
+          @media (max-width: $xs) {
+            margin-right: 5px;
+          }
         }
         &.outline {
           color: color(thm);
@@ -1935,6 +2527,8 @@ section {
     height: 100%;
     background-image: url(../img/city-bg.jpg);
     background-size: contain;
+    background-repeat: repeat no-repeat;
+    background-position-y: bottom;
     opacity: 0.2;
     pointer-events: none;
   }
@@ -2386,6 +2980,9 @@ form {
       border: none;
       .modal-title {
         font-size: 30px;
+        @media (max-width: $xs) {
+          font-size: 23px;
+        }
         span {
           color: color(thm);
         }
@@ -2469,17 +3066,30 @@ form {
 
         &.pre-order-option {
           // margin-bottom: 5px;
+          
 
           &.no-border {
             margin-bottom: 25px;
             border: none;
 
+            @media (max-width: $sm) {
+              margin-bottom: 5px;
+
+              .select-group {
+                margin-bottom: 20px;
+              }
+
+            }
+
             .row {
               .col-md-6, .col-md-12 {
                 padding-right: 8px;
                 padding-left: 8px;
+                
               }
             }
+
+            
 
           }
 
@@ -2502,6 +3112,11 @@ form {
             flex-wrap: wrap;
             margin-bottom: 20px;
 
+            @media (max-width: $xs) {
+              // @include start();
+              display: inline-flex;
+            }
+
             li {
               @include font(r);
               color: color(wht);
@@ -2512,6 +3127,12 @@ form {
               display: inline-flex;
               padding: 5px 10px;
               margin-right: 5px; 
+
+              @media (max-width: $xs) {
+                min-width: 90px;
+                margin-right: 1px;
+                margin-bottom: 2px;
+              }
               
               &:last-child {
                 margin-right: 0;
@@ -2597,12 +3218,21 @@ form {
         border-radius: .3rem .3rem 0 0;
         object-fit: cover;
         object-position: center;
+        @media (max-width: $sm) {
+          height: 220px;
+        }
+        @media (max-width: $xs) {
+          height: 260px;
+        }
       }
       .product-descriptions {
         padding: 25px 25px;
         h2 {
           font-size: 26px;
           color: color(blk);
+          @media (max-width: $sm) {
+            font-size: 22px;
+          }
           span {
             color: color(thm);
           } 
@@ -2727,191 +3357,6 @@ form {
   }
 }
 
-.cart {
-  button {
-    width: auto;
-    min-width: 60px;
-    height: 35px;
-    border-radius: 20px;
-    padding: 8px 15px;
-    background-color: color(thm) !important;
-    @include font(m);
-    font-size: 16px;
-    color: color(wht);
-    line-height: 0;
-    &:after {
-      display: none;
-    }
-    i {
-      margin-right: 5px;
-      font-size: 16px;
-    }
-  }
-
-  .cart-board {
-    width: auto;
-    min-width: 460px;
-    height: auto;
-    max-height: 80vh;
-    overflow-y: scroll;
-    top: calc(100% + 20px);
-    left: auto;
-    right: 0;
-    border: none;
-    border-radius: 0;
-    background-color: color(wht);
-    box-shadow: $shadow;
-    padding: 25px 25px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    h1 {
-      font-size: 26px;
-    }
-    .order-from {
-      font-size: 14px;
-      @include font(m);
-      margin-top: 15px;
-      span {
-        color: color(grey-dark);
-      }
-      a {
-        @include font(m);
-        color: color(thm) !important;
-        text-decoration: underline !important;
-        margin: 0 5px;
-      }
-    }
-    .added-item-cont {
-      width: 100%;
-      margin-top: 25px;
-
-      .added-item {
-        width: 100%;
-        @include start();
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid rgba($color: color(grey-dark), $alpha: 0.3);
-
-        &:last-child {
-          padding-bottom: 0;
-          margin-bottom: 0;
-          border: none;
-        }
-
-        form {
-          max-width: 90px;
-          margin-right: 15px;
-
-          .select-group {
-            &:after {
-              right: 10px;
-            }
-          }
-          .form-control {
-            padding-left: 12px;
-            padding-right: 12px;
-            background-color: rgba($color: color(grey), $alpha: 0.3);
-            border-color: rgba($color: color(grey-dark), $alpha: 0.3);
-          }
-        }
-
-        .added-description {
-          width: calc(100% - 90px - 15px);
-          @include between();
-          align-items: flex-start;
-          .product-desc {
-            width: calc(100% - 88px);
-            .p-name {
-              @include font(m);
-              font-size: 17px;
-              color: color(blk);
-              margin: 12px 0;
-            }
-            .extra-items {
-              list-style: none;
-              margin-bottom: 10px;
-              &:last-child {
-                margin-bottom: 0;
-              }
-              li {
-                margin: 0;
-                @include font(r);
-                color: color(txt);
-                font-size: 14px;
-                &.title {
-                  color: color(blk);
-                  font-size: 15px;
-                }
-              }
-            }
-          }
-
-          .product-right {
-            @include end();
-            align-items: center;
-            i {
-              color: color(grey-dark);
-              margin: 0 15px
-            }
-            .p-price {
-              @include font(m);
-              font-size: 17px;
-              color: color(thm);
-              margin: 12px 0;
-            }
-          }
-        }
-      }
-    }
-    
-    button {
-      position: relative;
-      margin-top: 25px;
-      width: 100%;
-      height: 50px;
-      border-radius: 0;
-      text-transform: initial;
-
-      .total-items {
-        width: 20px;
-        height: 20px;
-        border: 1px solid color(wht);
-        @include center();
-        font-size: 14px;
-        @include font(r);
-        position: absolute;
-        top: calc(50% - 10px);
-        left: 15px;
-      }
-
-      .total-price {
-        position: absolute;
-        top: calc(50% - 0px);
-        right: 15px;
-        font-size: 14px;
-        @include font(r);
-      }
-    }
-
-    .free-delivery {
-      @include center();
-      width: 100%;
-      margin-top: 20px;
-      @include font(m);
-      font-size: 15px;
-      color: color(blk);
-
-      span {
-        text-decoration: underline;
-        margin: 0 5px;
-      }
-    }
-  }
-}
-
 .no-banner {
   margin-top: 75px;
 }
@@ -2942,6 +3387,14 @@ form {
             padding-right: 7px;
             padding-left: 7px;
             margin-bottom: 20px;   
+
+            @media (max-width: $sm) {
+              margin-bottom: 0;
+              .input-group {
+                margin-bottom: 20px
+              }
+            }
+
             label {
               @include font(r);
               font-size: 16px;
@@ -2955,6 +3408,9 @@ form {
             .form-check {
               margin-bottom: 0;
               margin-top: 10px;
+              @media (max-width: $sm) {
+                margin-bottom: 20px;
+              }
             }
             .discount {
               button {
@@ -2981,12 +3437,21 @@ form {
             .payments {
               width: 100%;
               @include start();
+              flex-wrap: wrap;
               .form-check {
                 margin-right: 50px;
+                @media (max-width: $md ) {
+                  margin-right: 20px;
+                }
               }
             }
             .btn-outline-primary, .btn-outline-secondary {
               width: 100%;
+            }
+            button {
+              @media (max-width: $md ) {
+                margin-bottom: 15px;
+              }
             }
             .row {
               .col-md-6, .col-md-12 {
@@ -3003,10 +3468,16 @@ form {
     width: 100%;
     padding-left: 35px;
 
+    @media (max-width: $sm) {
+      padding-left: 0;
+      margin-top: 35px;
+    }
+
     .business-items-cont {
       width: 100%;
       .business-items {
         width: 100%;
+        @include start();
         margin-bottom: 18px;
         &:last-child {
           margin-bottom: 0px;
@@ -3042,6 +3513,9 @@ form {
   button.place-order {
     width: 100%;
     margin-top: 20px;
+    @media (max-width: $xs ) {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -3069,6 +3543,9 @@ form {
       font-size: 17px;
       color: color(thm); 
       line-height: 19px;   
+      @media (max-width: $xs ) {
+        font-size: 15px;
+      }
     }
 
     .ordered-description {
@@ -3082,12 +3559,18 @@ form {
           font-size: 17px;
           color: color(blk);
           margin: 0;
+          @media (max-width: $xs ) {
+            font-size: 16px;
+          }
         }
         .extra-items {
           list-style: none;
           margin-top: 12px;
           margin-bottom: 10px;
           &:last-child {
+            margin-bottom: 0;
+          }
+          @media (max-width: $xs ) {
             margin-bottom: 0;
           }
           li {
@@ -3115,6 +3598,9 @@ form {
           font-size: 17px;
           color: color(thm);
           margin-bottom: 0;
+          @media (max-width: $xs ) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -3152,6 +3638,9 @@ form {
       span {
         @include font(b);
         font-size: 22px;
+        @media (max-width: $xs ) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -3163,6 +3652,19 @@ form {
     padding-bottom: 40px;
     margin-bottom: 45px;
     border-bottom: 1px solid color(grey);
+    @media (max-width: $sm) {
+      // margin-top: 20px;
+      padding-bottom: 30px;
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+    @media (max-width: $xs ) {
+      font-size: 26px;
+    }
+    @media (max-width: $s ) {
+      font-size: 22px;
+      padding-bottom: 20px;
+    }
   }
   .confirmation-details-cont {
     width: 100%;
@@ -3172,6 +3674,9 @@ form {
       width: 685px;
       max-width: 100%;
       padding: 0 15px;
+      @media (max-width: $xs) {
+        padding: 0;
+      }
       button {
         width: 100%;
         height: 60px;
@@ -3179,6 +3684,9 @@ form {
         @include font(r);      
         font-size: 18px;
         text-transform: uppercase;
+        @media (max-width: $xs ) {
+          font-size: 17px;
+        }
         &:hover {
           background-color: transparent;
         }
@@ -3190,6 +3698,11 @@ form {
         padding: 30px 30px;
         margin-top: 30px;
 
+        @media (max-width: $xs ) {
+          padding: 30px 20px;
+          padding-bottom: 15px;
+        }
+
         .details-item {
           width: 100%;
           padding-bottom: 30px;
@@ -3200,6 +3713,10 @@ form {
             padding-bottom: 0;
             margin-bottom: 0;
             border: none;
+          }
+
+          @media (max-width: $sm) {
+            padding-bottom: 10px;
           }
 
           .title {
@@ -3215,6 +3732,13 @@ form {
             margin-bottom: 10px;
               &:last-child {
                 margin-bottom: 0;
+              }
+              @media (max-width: $sm) {
+                margin-top: 8px;
+                margin-bottom: 20px;
+                &:last-child {
+                  margin-bottom: 20px;
+                }
               }
               li {
                 margin: 0;
@@ -3275,6 +3799,10 @@ form {
         @include font(m);
         color: color(wht);
         font-size: 22px;
+        @media (max-width: $xs ) {
+          font-size: 20px;
+          padding: 10px 20px;
+        }
         span {
           &.left {
             text-align: left;
@@ -3292,6 +3820,9 @@ form {
         @include font(m);
         font-size: 18px;
         color: color(blk);
+        @media (max-width: $xs ) {
+          margin-top: 25px;
+        }
       }
     }        
   }  

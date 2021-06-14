@@ -42,7 +42,7 @@ function OnlineOrder() {
                     <Form.Group>
                         <InputGroup className="grey">
                             <InputGroup.Prepend>
-                                <InputGroup.Text><i class="fas fa-search"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-search"></i></InputGroup.Text>
                             </InputGroup.Prepend>
                             <Form.Control id="" placeholder="What are you craving?" />
                         </InputGroup>

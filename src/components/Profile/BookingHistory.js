@@ -19,7 +19,7 @@ function BookingHistory() {
                         <Col md={12} sm={12}>
                             <InputGroup className="grey">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text><i class="fas fa-search"></i></InputGroup.Text>
+                                    <InputGroup.Text><i className="fas fa-search"></i></InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control id="" placeholder="Search" />
                             </InputGroup>
@@ -35,9 +35,9 @@ function BookingHistory() {
                         <div className="busn-details">
                             <h3>Jack in the Box (400 Geary St)</h3>
                             <ul className="other">
-                                <li class="ordered">2 items for $31.98</li>
-                                <li class="delivery-status">21-01-2020  11:00</li>
-                                <li class="receipt"><Link to={``}>View receipt</Link></li>
+                                <li className="ordered">2 items for $31.98</li>
+                                <li className="delivery-status">21-01-2020  11:00</li>
+                                <li className="receipt"><Link to={``}>View receipt</Link></li>
                             </ul>
                         </div>
 
@@ -53,9 +53,9 @@ function BookingHistory() {
                         <div className="busn-details">
                             <h3>Jack in the Box (400 Geary St)</h3>
                             <ul className="other">
-                                <li class="ordered">2 items for $31.98</li>
-                                <li class="delivery-status">21-01-2020  11:00</li>
-                                <li class="receipt"><Link to={``}>View receipt</Link></li>
+                                <li className="ordered">2 items for $31.98</li>
+                                <li className="delivery-status">21-01-2020  11:00</li>
+                                <li className="receipt"><Link to={``}>View receipt</Link></li>
                             </ul>
                         </div>
 

@@ -16,7 +16,7 @@ function ProductOptions() {
                             <h5>Would you like to add this?</h5>
                             <span className="desc">Choose up to 3</span>
                         </div>
-                        <span className="angle"><i class="fas fa-angle-down"></i></span>
+                        <span className="angle"><i className="fas fa-angle-down"></i></span>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                         <Card.Body>
@@ -56,7 +56,7 @@ function ProductOptions() {
                             <h5>How Spicy?</h5>
                             <span className="desc">Choose up to 1</span>
                         </div>
-                        <span className="angle"><i class="fas fa-angle-down"></i></span>
+                        <span className="angle"><i className="fas fa-angle-down"></i></span>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="1">
                         <Card.Body>

@@ -17,17 +17,17 @@ function OrderDetails() {
             <div className="cart-details">
                 <div className="business-items-cont">
                     <div className="business-items">
-                        <i class="fas fa-shopping-bag"></i>
+                        <i className="fas fa-shopping-bag"></i>
                         <span className="from">From <Link>Jack in the Box (6133 E Ben White Blvd, Austin)</Link></span>
                     </div>
 
                     <div className="business-items">
-                        <i class="fas fa-clock"></i>
+                        <i className="fas fa-clock"></i>
                         <span>Arriving in 30-40 min</span>
                     </div>
 
                     <div className="business-items">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i className="fas fa-map-marker-alt"></i>
                         <span>Taco Bell (7255 Mission St.)</span>
                     </div>
 
@@ -96,7 +96,7 @@ function OrderDetails() {
                                 delay={{ show: 250, hide: 400 }}
                                 overlay={renderTooltip}
                             >
-                                <Button><i class="fas fa-info-circle"></i></Button>
+                                <Button><i className="fas fa-info-circle"></i></Button>
                             </OverlayTrigger>
                         </span>
                         <span className="right">$5.00</span>

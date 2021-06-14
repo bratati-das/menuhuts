@@ -50,9 +50,9 @@ grilled to go.</p>
                 </Modal.Body>
                 <Modal.Footer className="product-footer">
                     <div className="plus-minus-cont">
-                        <Button><i class="fas fa-minus"></i></Button>
+                        <Button><i className="fas fa-minus"></i></Button>
                         <span>1</span>
-                        <Button><i class="fas fa-plus"></i></Button>
+                        <Button><i className="fas fa-plus"></i></Button>
                     </div>
 
                     <Button type="submit" variant="primary">Add to Cart <span className="total-price">$9.99</span></Button>

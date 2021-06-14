@@ -16,9 +16,8 @@ function PreOrder() {
 
     return (
         <>
-            <Link to={``} onClick={preOrderShow}>
-                <span>Pre Order</span>
-            </Link>
+
+            <Link to={``} onClick={preOrderShow}>Preorder</Link>
 
             <Modal show={show} onHide={preOrderClose}>
                 <Modal.Header closeButton>

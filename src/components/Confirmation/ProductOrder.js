@@ -114,7 +114,7 @@ function ProductOrder() {
                                                                 delay={{ show: 250, hide: 400 }}
                                                                 overlay={renderTooltip}
                                                             >
-                                                                <Button><i class="fas fa-info-circle"></i></Button>
+                                                                <Button><i className="fas fa-info-circle"></i></Button>
                                                             </OverlayTrigger>
                                                         </span>
                                                         <span className="right">$5.00</span>

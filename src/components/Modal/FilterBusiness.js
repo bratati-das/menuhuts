@@ -12,9 +12,7 @@ function FilterBusiness() {
 
     return (
         <>
-            {/* <Link to={``} onClick={filterBusinesssShow}>
-                <span>Filter Business</span>
-            </Link> */}
+            <Link to={``} className="filter" onClick={filterBusinesssShow}><i className="fas fa-filter"></i> Filter</Link>
 
             <Modal show={show} onHide={filterBusinesssClose}>
                 <Modal.Header closeButton>

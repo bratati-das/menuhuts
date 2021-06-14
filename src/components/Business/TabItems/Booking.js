@@ -16,7 +16,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-calendar-day"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-calendar-day"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Date" />
                                         </InputGroup>
@@ -24,7 +24,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-clock"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-clock"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Time" />
                                         </InputGroup>
@@ -37,7 +37,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-user"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-user"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Name" />
                                         </InputGroup>
@@ -45,7 +45,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-envelope"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-envelope"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Email" />
                                         </InputGroup>
@@ -57,7 +57,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-mobile"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-mobile"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Mobile" />
                                         </InputGroup>
@@ -65,7 +65,7 @@ function Booking() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-users"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-users"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="People" />
                                         </InputGroup>
@@ -77,7 +77,7 @@ function Booking() {
                                     <Col md={12} sm={12}>
                                         <InputGroup className="grey textarea">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-comment"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-comment"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control as="textarea" id="" placeholder="Message" />
                                         </InputGroup>

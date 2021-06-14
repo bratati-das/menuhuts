@@ -13,7 +13,7 @@ function ChangePassword() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-key"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-key"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Current password" />
                                     </InputGroup>
@@ -21,7 +21,7 @@ function ChangePassword() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-key"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-key"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="New password" />
                                     </InputGroup>
@@ -34,7 +34,7 @@ function ChangePassword() {
                                 <Col md={6} sm={12}>
                                     <InputGroup className="grey">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text><i class="fas fa-key"></i></InputGroup.Text>
+                                            <InputGroup.Text><i className="fas fa-key"></i></InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control id="" placeholder="Confirm password" />
                                     </InputGroup>

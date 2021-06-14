@@ -19,7 +19,7 @@ function FavouriteRestaurant() {
                         <Col md={12} sm={12}>
                             <InputGroup className="grey">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text><i class="fas fa-search"></i></InputGroup.Text>
+                                    <InputGroup.Text><i className="fas fa-search"></i></InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control id="" placeholder="Search" />
                             </InputGroup>
@@ -35,13 +35,13 @@ function FavouriteRestaurant() {
                         <div className="busn-details">
                             <h3>Jack in the Box (400 Geary St)</h3>
                             <ul>
-                                <li class="phone">0393975451</li>
-                                <li class="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
+                                <li className="phone">0393975451</li>
+                                <li className="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
                             </ul>
                         </div>
 
                         <Link to={``} className="favorite-icon">
-                            <i class="fas fa-heart"></i>
+                            <i className="fas fa-heart"></i>
                         </Link>
                     </div>
                 </div>
@@ -52,13 +52,13 @@ function FavouriteRestaurant() {
                         <div className="busn-details">
                             <h3>Jack in the Box (400 Geary St)</h3>
                             <ul>
-                                <li class="phone">0393975451</li>
-                                <li class="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
+                                <li className="phone">0393975451</li>
+                                <li className="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
                             </ul>
                         </div>
 
                         <Link to={``} className="favorite-icon">
-                            <i class="fas fa-heart"></i>
+                            <i className="fas fa-heart"></i>
                         </Link>
                     </div>
                 </div>
@@ -69,13 +69,13 @@ function FavouriteRestaurant() {
                         <div className="busn-details">
                             <h3>McDonald's® (Fillmore)</h3>
                             <ul>
-                                <li class="phone">0393975451</li>
-                                <li class="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
+                                <li className="phone">0393975451</li>
+                                <li className="address">135 Nelson Place, Williamstown VIC 3016, Australia</li>
                             </ul>
                         </div>
 
                         <Link to={``} className="favorite-icon">
-                            <i class="fas fa-heart"></i>
+                            <i className="fas fa-heart"></i>
                         </Link>
                     </div>
                 </div>

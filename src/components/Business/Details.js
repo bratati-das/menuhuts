@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Container, Col, Form, InputGroup } from "react-bootstrap";
 
 // components
+import PreOrder from '../Modal/PreOrder';
 import BusinessTab from './BusinessTab';
+
 
 
 function Details() {
     return (
-        <>
+        <Router>
             <section className="business-offer">
                 <Container fluid>
                     <Col>
@@ -45,7 +47,7 @@ function Details() {
                                         </Form.Group>
                                     </Form>
                                 </li>
-                                <li><Link to={``}>Preorder</Link></li>
+                                <li><PreOrder /></li>
                                 <li>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="86.43" height="14.04" viewBox="0 0 126.889 20.619">
                                         <g id="Group_33" data-name="Group 33" transform="translate(-1165 -2991)">
@@ -93,7 +95,7 @@ function Details() {
                 </Container>
             </section>
 
-        </>
+        </Router>
     );
 }
 

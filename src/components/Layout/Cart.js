@@ -11,7 +11,7 @@ function Cart() {
         <Router>
             <Dropdown className="cart">
                 <Dropdown.Toggle id="dropdown-basic">
-                    <i class="fas fa-shopping-bag"></i> <span>2</span>
+                    <i className="fas fa-shopping-bag"></i> <span>2</span>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="cart-board">
@@ -50,7 +50,7 @@ function Cart() {
                                 </div>
 
                                 <div className="product-right">
-                                    <i class="fas fa-pen"></i>
+                                    <i className="fas fa-pen"></i>
                                     <h5 className="p-price">$9.99</h5>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ function Cart() {
                                 </div>
 
                                 <div className="product-right">
-                                    <i class="fas fa-pen"></i>
+                                    <i className="fas fa-pen"></i>
                                     <h5 className="p-price">$9.99</h5>
                                 </div>
                             </div>

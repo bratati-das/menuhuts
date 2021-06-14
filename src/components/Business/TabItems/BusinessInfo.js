@@ -9,9 +9,9 @@ function BusinessInfo() {
             <div className="other-container business-info">
                 <Row>
                     <Col md={6} sm={12}>
-                        <h5 className="sub-heading"><i class="fas fa-map-marker-alt"></i>6133 E Ben White Blvd, Austin, TX 78741</h5>
+                        <h5 className="sub-heading"><i className="fas fa-map-marker-alt"></i>6133 E Ben White Blvd, Austin, TX 78741</h5>
                         <hr />
-                        <h5 className="sub-heading"><i class="fas fa-clock"></i>Opening hours</h5>
+                        <h5 className="sub-heading"><i className="fas fa-clock"></i>Opening hours</h5>
                         <ul className="hours">
                             <li>
                                 <span>Sunday</span>
@@ -69,7 +69,7 @@ function BusinessInfo() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-user"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-user"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Name" />
                                         </InputGroup>
@@ -77,7 +77,7 @@ function BusinessInfo() {
                                     <Col md={6} sm={12}>
                                         <InputGroup className="grey">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-envelope"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-envelope"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control id="" placeholder="Email" />
                                         </InputGroup>
@@ -89,7 +89,7 @@ function BusinessInfo() {
                                     <Col md={12} sm={12}>
                                         <InputGroup className="grey textarea">
                                             <InputGroup.Prepend>
-                                                <InputGroup.Text><i class="fas fa-comment"></i></InputGroup.Text>
+                                                <InputGroup.Text><i className="fas fa-comment"></i></InputGroup.Text>
                                             </InputGroup.Prepend>
                                             <Form.Control as="textarea" id="" placeholder="Message" />
                                         </InputGroup>
