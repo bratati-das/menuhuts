@@ -1320,7 +1320,8 @@ section {
       font-size: 15px;
       @include font(m);
       color: color(thm);
-      text-transform: capitalize;      
+      text-transform: capitalize;  
+      line-height: 20px;    
       &:hover {
         background-color: color(thm);
         color: color(wht);

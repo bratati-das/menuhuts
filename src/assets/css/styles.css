@@ -1294,6 +1294,7 @@ section .container-heading span {
   font-weight: normal;
   color: #ff6937;
   text-transform: capitalize;
+  line-height: 20px;
 }
 .breadcumbs .body-top .filter:hover {
   background-color: #ff6937;
